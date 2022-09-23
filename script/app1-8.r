@@ -32,28 +32,31 @@
  
   #B
   temperature = sample(-30:120, size=1);
-  
-  if(temperature > -20 & temperature < 30)
+  if(temperature > 100)
   {
-    cat("cold\n")
+    cat("Invalid Value\n")
   }
-  else if(temperature == 30)
+  else if(temperature > 60)
   {
-    cat("cold-ish\n")
-  }
-  else if(temperature > 30 & temperature < 60)
-  {
-    cat("warm\n")
+    cat("hot\n")
   }
   else if(temperature == 60)
   {
     cat("warm-ish\n")
   }
-  else if(temperature > 60 & temperature < 100)
+  else if(temperature > 30)
   {
-    cat("hot\n")
+    cat("warm\n")
   }
-  else
+  else if(temperature == 30)
+  {
+    cat("cold-ish\n")
+  }
+  else if(temperature > -20)
+  {
+    cat("cold\n")
+  }
+  else if(temperature < -20)
   {
     cat("invalid value\n")
   }
@@ -76,26 +79,33 @@
   #E
   if(randomTemp >= 60)
   {
-    cat("It is 60 degrees or more.\n")
+    if(randomWeatherCondition == "Sunny")
+    {
+      cat("It is 60 degrees or more, and it is sunny!")
+    }
+    else if(randomWeatherCondition != "Sunny")
+    {
+      cat("It is 60 degrees or more, but it is not sunny.")
+    }
   }
-  else
+  else if (randomTemp < 60)
   {
-    cat("It is less than 60 degrees.\n")
+    if(randomWeatherCondition == "Sunny")
+    {
+      cat("It is less than 60 degrees, but it is sunny!")
+    }
+    else
+    {
+      cat("It is less than 60 degrees, and it is not sunny.")
+    }
   }
-  
-  if(randomWeatherCondition == "sunny")
-  {
-    cat("It is sunny.\n")
-  }
-  else
-  {
-    cat("It is not sunny.\n")
-  }
+      
+      
+      
 
   # Comfort level 7/10
   # None
   # What is the suggested way to do part C?
-  
   
   
 } 
