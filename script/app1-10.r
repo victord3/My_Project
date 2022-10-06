@@ -29,13 +29,12 @@
   
   #3
   lowTempSum = 0
-  meanLowTemp = lowTempSum / numDays
   
   for(i in 1:numDays)
   {
     lowTempSum = lowTempSum + lowTemps[i]
-    meanLowTemp = lowTempSum / numDays
   }
+  meanLowTemp = lowTempSum / numDays
   
   #4 
   moreThan1 = 0
@@ -48,11 +47,11 @@
     {
       moreThan1 = moreThan1 + 1
     }
-    else if(precip[i] > 0.1)
+    else if(precip[i] >= 0.1)
     {
       between0.1And1 = between0.1And1 + 1
     }
-    else if(precip[i] < 0.1)
+    else if(precip[i] > 0)
     {
       lessThan0.1 = lessThan0.1 + 1
     }
@@ -60,16 +59,16 @@
    
   #5
   lowestTemp = lowTemps[1]
+  lowestTempDate = NULL
   for(i in 1:numDays)
   {
     if(lowTemps[i] < lowestTemp)
     {
       lowestTemp = lowTemps[i]
-      cat(weatherData$date[i],"had the lowest temp of", lowTemps[i], "\n")
-      # How would I only print the overall lowest?
+      lowestTempDate = weatherData$date[i]
     }
-    
   }
+  cat(lowestTempDate,"had the lowest temp of", lowTemps[i], "\n")
   
   #6    
   #Completed
