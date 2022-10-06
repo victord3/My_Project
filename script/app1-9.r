@@ -46,7 +46,7 @@
   }
   cat("There was", evenCloudyDays, "cloudy day/s on even days. \n")
   
-  for(last8 in 7:numDays)
+ for(last8 in (numDays-7):numDays)
   {
     if(noonCond[last8] == "Cloudy")
     {
