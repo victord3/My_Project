@@ -68,7 +68,7 @@
       lowestTempDate = weatherData$date[i]
     }
   }
-  cat(lowestTempDate,"had the lowest temp of", lowTemps[i], "\n")
+  cat(lowestTempDate,"had the lowest temp of", lowestTemp, "\n")
   
   #6    
   #Completed
