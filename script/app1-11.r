@@ -25,19 +25,19 @@
   
   for(i in 1:numDays)
   {
-    if(noonCond[i] == "Sunny" && highTemps[i] > 54)
+    if(noonCond[i] == "Sunny" & highTemps[i] > 54)
     {
       sunnyDaysGT54 = sunnyDaysGT54 +1
     }
-    else if(noonCond[i] != "Sunny" && highTemps[i] <= 54)
+    else if(noonCond[i] != "Sunny" & highTemps[i] <= 54)
     {
       nonSunnyDaysLTOET54 = nonSunnyDaysLTOET54 +1
     }
-    else if(noonCond[i] == "Sunny" && highTemps[i] <= 54)
+    else if(noonCond[i] == "Sunny" & highTemps[i] <= 54)
     {
       sunnyDaysLTOET54 = sunnyDaysLTOET54 +1
     }
-    else if(noonCond[i] != "Sunny" && highTemps[i] > 54)
+    else if(noonCond[i] != "Sunny" & highTemps[i] > 54)
     {
       nonSunnyDaysGT54 = nonSunnyDaysGT54 +1
     }
@@ -48,7 +48,7 @@
   
   for(i in 1:numDays)
   {
-    if(noonCondMessy[i] == "clouds" || noonCondMessy[i] == "Cloudy" || noonCondMessy[i] == "cloudy")
+    if(noonCondMessy[i] == "clouds" | noonCondMessy[i] == "Cloudy" | noonCondMessy[i] == "cloudy")
     {
       cloudyDays = cloudyDays + 1
     }
@@ -59,7 +59,7 @@
   
   for(i in 1:numDays)
   {
-    if(noonCond[i] == "Rain" || noonCond[i] == "Cloudy" || noonCond[i] == "Snow")
+    if(noonCond[i] == "Rain" | noonCond[i] == "Cloudy" | noonCond[i] == "Snow")
     {
       badWeatherDay = badWeatherDay + 1
     }
@@ -69,7 +69,7 @@
   sunnyWarmDay = 0
   for(i in 1:numDays)
   {
-    if(lowTemps[i] > 40 && highTemps[i] > 60 && noonCond[i] == "Sunny")
+    if(lowTemps[i] > 40 & highTemps[i] < 60 & noonCond[i] == "Sunny")
     {
       sunnyWarmDay = sunnyWarmDay + 1
       print(date[i])
@@ -79,23 +79,23 @@
   #E
   randomTemp = sample(0:100, size=1);
   
-  if(randomTemp < 20 || randomTemp > 80)
+  if(randomTemp < 20 | randomTemp > 80)
   {
     print("error")
   }
-  else if(randomTemp >= 20 && randomTemp < 30)
+  else if(randomTemp >= 20 & randomTemp < 30)
   {
     print("very cold")
   }
-  else if(randomTemp >= 30 && randomTemp < 45)
+  else if(randomTemp >= 30 & randomTemp < 45)
   {
     print("cold")
   }
-  else if(randomTemp >= 45 && randomTemp < 60)
+  else if(randomTemp >= 45 & randomTemp < 60)
   {
     print("nice")
   }
-  else if(randomTemp >= 60 && randomTemp <80)
+  else if(randomTemp >= 60 & randomTemp <80)
   {
     print("unusually warm")
   }
