@@ -3,7 +3,7 @@
   options(show.error.locations = TRUE);  # show the line number of errors in the Console
   
   ### read in data from  twoWeekWeatherData.csv
-  weatherData = read.csv(file="twoWeekWeatherData3.csv", 
+  weatherData = read.csv(file="data/twoWeekWeatherData3.csv", 
                          sep=",",
                          header=TRUE, 
                          stringsAsFactors = FALSE);  
