@@ -21,7 +21,7 @@
     remain = div1 %% div2
     return(remain)
   }
-  remainder(50, 9)
+  remainderEx = remainder(50, 9)
   
   #4
   celciusToFahrenheit = function(celc)
@@ -29,12 +29,16 @@
     fahr = (9/5)*(celc) + 32
     return(fahr)
   }
-  celciusToFahrenheit(0)
+  celToFahrEx = celciusToFahrenheit(0)
   
   #5
   percentToLetterGrade = function(percent)
   {
-    if(percent >= 90)
+    if(percent > 100)
+    {
+      return("Error")
+    }
+    else if(percent >= 90)
     {
       return("A")
     }
@@ -54,16 +58,16 @@
     {
       return("E")
     }
-    else if(percent > 0)
+    else if(percent >= 0)
     {
       return("F")
     }
-    else if(percent < 0 | number > 100)
+    else if(percent < 0)
     {
       return("Error")
     }
   }
-  percentToLetterGrade(60)
+  letterGradeEx = percentToLetterGrade(60)
   
   #1. Very comfortable
   #2. Nothing
