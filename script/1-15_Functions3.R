@@ -9,7 +9,7 @@
   rm(list=ls());  # cleans out the Environment every time the code is executed
   options(show.error.locations = TRUE);  # show the line number of errors in the Console
   
-  source(file="scripts/temperature.r");
+  source(file="script/temperature.r");
   
   cat1a = tempCategory(45);
   cat1b = tempCategory(tempValue=85);
