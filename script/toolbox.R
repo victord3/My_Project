@@ -60,7 +60,7 @@ counter2 = function(vector, compareVal, conditionalOp=">")
     }
     else
     {
-      print("Error")
+      return("Error")
     }
   }
   return(countVal);    # return the count value to the caller
@@ -86,15 +86,14 @@ valueComparer = function(vector, compareVal, conditionalOp="<")
       trueOrFalse = trueOrFalse + 1
     }
   }
-  print(trueOrFalse)
   
   if(trueOrFalse > 0)
   {
-    print("TRUE")
+    return("TRUE")
   }
   else if(trueOrFalse == 0)
   {
-    print("FALSE")
+    return("FALSE")
   }
 }       
 
