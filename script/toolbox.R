@@ -60,6 +60,7 @@ counter2 = function(vector, compareVal, conditionalOp=">")
     }
     else
     {
+      broswer();
       return("Error")
     }
   }
