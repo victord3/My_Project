@@ -58,6 +58,14 @@ counter2 = function(vector, compareVal, conditionalOp=">")
     {
       countVal = countVal + 1
     }
+<<<<<<< HEAD
+=======
+    else
+    {
+      broswer();
+      return("Error")
+    }
+>>>>>>> e6cc995751e8fab5f470d2311184a5669c391809
   }
     if(countVal == 0)
     {
