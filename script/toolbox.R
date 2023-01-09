@@ -58,12 +58,11 @@ counter2 = function(vector, compareVal, conditionalOp=">")
     {
       countVal = countVal + 1
     }
-    else
-    {
-      browser()
-      return("Error")
-    }
   }
+    if(countVal == 0)
+    {
+      return("error")
+    }
   return(countVal);    # return the count value to the caller
 }
 
